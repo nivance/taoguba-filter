@@ -18,8 +18,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.taoguba.com.cn/Article/*",
-        "https://www.taoguba.com.cn/Reply/*"
+        "https://www.tgb.cn/a/*",
+        "https://www.tgb.cn/r/*"
       ],
       "js": ["content.js"]
     }
@@ -37,7 +37,7 @@
     {
       "resources": ["content.js"],
       "matches": [
-        "https://www.taoguba.com.cn/*"
+        "https://www.tgb.cn/*"
       ]
     }
   ]
