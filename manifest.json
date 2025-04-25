@@ -8,11 +8,6 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "browser_action": {
-    "default_icon": "images/icon48.png",
-    "default_popup": "popup.html",
-    "default_title": "淘股吧论坛楼主留言过滤"
-  },
   "permissions": [
     "activeTab",
     "scripting"
@@ -22,16 +17,28 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.taoguba.com.cn/Article/*", "https://www.taoguba.com.cn/Reply/*"],
+      "matches": [
+        "https://www.taoguba.com.cn/Article/*",
+        "https://www.taoguba.com.cn/Reply/*"
+      ],
       "js": ["content.js"]
     }
   ],
   "action": {
+    "default_title": "淘股吧论坛楼主留言过滤",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon16.png",
       "48": "images/icon48.png",
       "128": "images/icon128.png"
     }
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": [
+        "https://www.taoguba.com.cn/*"
+      ]
+    }
+  ]
 }
